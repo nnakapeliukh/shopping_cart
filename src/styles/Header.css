@@ -1,0 +1,68 @@
+.header-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  min-height: 10vh;
+
+  box-shadow: 0px 10px 5px rgba(75, 74, 74, 0.466);
+  background-color: rgba(75, 74, 74, 0.548);
+  margin: 0;
+
+  color: white;
+  margin: 0;
+}
+.header-lists {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.header-div a {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.cart-icon-div {
+  position: fixed;
+  right: 50px;
+  top: 20px;
+}
+.cart-link {
+  position: absolute;
+  top: 20px;
+  display: inline;
+}
+
+.cart-icon-div h3 {
+  display: inline;
+  position: absolute;
+  top: -15px;
+  color: rgb(31, 29, 29);
+}
+
+.cart-image {
+  position: absolute;
+  display: inline;
+}
+
+body {
+  background-image: url(../img/Back.jpg);
+  background-repeat: repeat-y;
+  /* background-position: center; */
+  /* background-size: cover; */
+}
+
+.main-title {
+  font-size: 50px;
+}
+
+.background-credits {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: medium;
+}
