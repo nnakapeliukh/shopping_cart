@@ -23,8 +23,11 @@
   color: rgb(255, 255, 255);
   font-size: 30px;
   text-decoration: none;
+  padding: 20px;
 }
-
+.header-div a:hover {
+  color: rgb(200, 200, 200);
+}
 .cart-icon-div {
   position: fixed;
   right: 50px;
@@ -46,6 +49,10 @@
 .cart-image {
   position: absolute;
   display: inline;
+}
+
+.cart-icon-div:hover {
+  transform: scale(1.1);
 }
 
 body {
