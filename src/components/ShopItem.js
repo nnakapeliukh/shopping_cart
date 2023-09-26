@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import "../styles/ShopItem.css";
 
 const ShopItem = (props) => {
+  console.log(props)
   return (
     <div className="item-div">
-      {props.item ? (
-        <Link to={`/shop/${props.item._id}`}>
+      {props ? (
+        <Link to={`/shop/${props.id}`}>
+          
           <img
             className="product-image"
-            src={props.item.product_image_md}
-            alt={props.item.product_name}
+            src={props.item.image}
+            alt={props.item.title}
           />
-          <p className="product-name">{props.item.product_name}</p>
-          <p className="product-price">${props.item.product_price}</p>
+          <p className="product-name">{props.item.title}</p>
+          <p className="product-price">${props.item.price}</p>
           {/* <p className="product-material">
             Material: {props.item.product_material}
           </p> */}

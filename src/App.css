@@ -1,0 +1,11 @@
+.product-image{
+    width: 300px;
+}
+.product-name {
+    white-space: normal;
+    /* white-space: pre-wrap; */
+  }
+
+  .item-div{
+    width: 300px;
+  }
