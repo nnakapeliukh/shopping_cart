@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import "../styles/ShopItem.css";
 
 const ShopItem = (props) => {
-  console.log(props)
   return (
     <div className="item-div">
       {props ? (
-        <Link to={`/shop/${props.id}`}>
+        <Link to={`/shop/${props.item.id}`}>
           
           <img
             className="product-image"

@@ -4,17 +4,22 @@ const ItemPage = (props, { match }) => {
   const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState("1");
 
-  const baseURL = "https://dummyproducts-api.herokuapp.com";
-  const ApiKey = "0QFpJVORqhJ5";
-
+  const baseURL = "https://fakestoreapi.com/products/";
+  // console.log("props ",props);
+  // console.log("match", {match});
+  // console.log('url',`${baseURL}${props.match.params.id}`)
   const getData = async () => {
     const rawItems = await fetch(
-      `${baseURL}/api/v1/products/${props.match.params.id}?apikey=${ApiKey}`
+      `${baseURL}${props.match.params.id}`
     );
-    const items = await rawItems.json();
-    setItem(items.data);
+    rawItems.json().then((json) => {
+      setItem(json);
+    });
+    
+    console.log("items", item);
   };
 
+  
   useEffect(() => {
     getData();
   }, []);
@@ -25,11 +30,11 @@ const ItemPage = (props, { match }) => {
         <div className="item-page">
           <div className="i-image">
             {" "}
-            <img src={item.product_image_lg} alt={item.product_name} />{" "}
+            <img src={item.image} alt={item.title} />{" "}
           </div>
           <div className="i-content">
-            <h1>{item.product_name}</h1>
-            <p>{item.product_description}</p>
+            <h1>{item.title}</h1>
+            <p>{item.description}</p>
             <div className="add-to-cart-div">
               <form
                 onSubmit={(event) => {
