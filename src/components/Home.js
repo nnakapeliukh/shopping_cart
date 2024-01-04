@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <Link to="/shop">
       <div className="dig-deep">
-        <h1>DIG DEEP</h1>
+        <h1>ENTER</h1>
       </div>
     </Link>
   );

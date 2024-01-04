@@ -16,7 +16,7 @@ const Header = (props) => {
 
   return (
     <div className="header-div">
-      <h1 className="main-title">DumpsterDive</h1>
+      <h1 className="main-title">My Store</h1>
       <ul className="header-lists">
         <li>
           <Link to="/">Home</Link>
@@ -30,17 +30,17 @@ const Header = (props) => {
       <Link className="cart-link" to="/cart">
         <div className="cart-icon-div">
           <img className="cart-img" width="80px" src={CartImage} alt="cart" />
-          <h3>{itemsInCart}</h3>
+          <h3 style={{color:'white'}}>{itemsInCart}</h3>
         </div>
       </Link>
       <div className="background-credits">
         <span>
           Photo by{" "}
-          <a href="https://unsplash.com/@randomlies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-            Ashim D’Silva
+          <a href="https://unsplash.com/@mikepetrucci">
+            Mike Petrucci
           </a>{" "}
           on{" "}
-          <a href="https://unsplash.com/@randomlies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          <a href="https://unsplash.com">
             Unsplash
           </a>
         </span>
