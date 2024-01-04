@@ -5,9 +5,6 @@ const ItemPage = (props, { match }) => {
   const [quantity, setQuantity] = useState("1");
 
   const baseURL = "https://fakestoreapi.com/products/";
-  // console.log("props ",props);
-  // console.log("match", {match});
-  // console.log('url',`${baseURL}${props.match.params.id}`)
   const getData = async () => {
     const rawItems = await fetch(
       `${baseURL}${props.match.params.id}`
@@ -16,13 +13,12 @@ const ItemPage = (props, { match }) => {
       setItem(json);
     });
     
-    console.log("items", item);
   };
 
   
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <div>

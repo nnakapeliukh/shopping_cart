@@ -5,24 +5,25 @@ import "../styles/CartItem.css";
 const CartItem = (props) => {
   const [quantity, setQuantity] = useState({});
 
+  console.log(props);
   useEffect(() => {
     setQuantity(props.product.quantity);
-  }, []);
+  }, [props.product.quantity]);
 
   return (
     <div className="cart-item-div">
       {props.product.item ? (
         <div>
-          <Link to={`/shop/${props.product.item._id}`}>
+          <Link to={`/shop/${props.product.item.id}`}>
             <img
-              // className="product-image"
-              src={props.product.item.product_image_md}
-              alt={props.product.item.product_name}
+              src={props.product.item.image}
+              alt={props.product.item.title}
+              className="product-image"
             />
-            <p>Price: ${props.product.item.product_price}</p>
+            <p>Price: ${props.product.item.price}</p>
             <p>
               Total: $
-              {props.product.item.product_price * props.product.quantity}
+              {props.product.item.price * props.product.quantity}
             </p>
           </Link>
           <form

@@ -1,11 +1,13 @@
 .dig-deep {
-  min-width: 300px;
-  min-height: 200px;
+  width: 400px;
+  min-height: 300px;
   box-shadow: 0px 10px 5px rgba(75, 74, 74, 0.466);
   background-color: rgba(75, 74, 74, 0.815);
-  position: absolute;
+  position: relative;
   top: 35%;
-  left: 43%;
+  /* left: 43%; */
+  margin: auto;
+  margin-top: 10%;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -18,4 +20,5 @@
 .dig-deep h1 {
   color: rgb(255, 255, 255);
   margin: auto;
+  font-size: 100px;
 }

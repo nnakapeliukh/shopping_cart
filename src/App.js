@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, } from "react-router-dom";
 import Shop from "./components/Shop";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import ItemPage from "./components/ItemPage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -16,7 +16,7 @@ function App() {
     let tempCart;
     if (cartItems[0] !== undefined) {
       tempCart = cartItems.map((mapItem) => {
-        if (mapItem.item._id === item._id) {
+        if (mapItem.item.id === item.id) {
           isAlreadyInCart = true;
           return {
             item: mapItem.item,
@@ -34,7 +34,7 @@ function App() {
 
   const changeItemQuantity = (item, quantity) => {
     let tempCart = cartItems.flatMap((mapItem) => {
-      if (mapItem.item._id === item._id) {
+      if (mapItem.item.id === item.id) {
         if (Number(quantity) === 0) {
           return [];
         } else {

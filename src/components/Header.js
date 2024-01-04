@@ -12,7 +12,7 @@ const Header = (props) => {
       totalItems += Number(item.quantity);
     }
     setItemsInCart(totalItems);
-  });
+  }, [props.cartItems]);
 
   return (
     <div className="header-div">

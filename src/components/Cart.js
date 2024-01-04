@@ -6,11 +6,12 @@ const Cart = (props) => {
   return (
     <div className="cart-div">
       {props.cartItems[0] !== undefined ? (
+        
         props.cartItems.map((item) => {
           return (
             <CartItem
-              product={item}
-              key={item.item._id}
+              key={item.id} 
+              product={item}              
               handleItemQuantChange={props.handleItemQuantChange}
             />
           );
